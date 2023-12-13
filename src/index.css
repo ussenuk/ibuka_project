@@ -95,6 +95,6 @@ li:not(:last-child) {
   color: #fff;
   cursor: pointer;
   font-size: 16px;
- 
+  padding-left: 0%;
   
 }

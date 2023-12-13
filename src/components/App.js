@@ -5,8 +5,11 @@ import QuestionForm from "./QuestionForm";
 import QuestionList from "./QuestionList";
 
 function App() {
-  const [page, setPage] = useState("List");
   const [darkMode, setDarkMode] = useState(false);
+  
+  const [page, setPage] = useState("List");
+ 
+  
   const [questions, setQuestions] = useState([]);
 
   const toggleDarkMode = () => {
@@ -14,12 +17,13 @@ function App() {
   };
 
   return (
+  
     <main className={`app-container ${darkMode ? 'dark-mode-toggle' : ''}`}>
       <AdminNavBar onChangePage={setPage} />
+      {page === "Form" ? <QuestionForm onAddQuestion={setPage}/> : <QuestionList />}
       {page === "Form" ? <QuestionForm onAddQuestion={() => setPage("List")} /> : <QuestionList />}
       <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
     </main>
   );
 }
-
 export default App;
