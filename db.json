@@ -9,7 +9,7 @@
         "key",
         "prop"
       ],
-      "correctIndex": 2
+      "correctIndex": "2"
     },
     {
       "id": 2,
@@ -76,6 +76,16 @@
         "3"
       ],
       "correctIndex": "2"
+    },
+    {
+      "answers": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "correctIndex": 0,
+      "id": 8
     }
   ]
 }
