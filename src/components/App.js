@@ -4,6 +4,8 @@ import QuestionForm from "./QuestionForm";
 import QuestionList from "./QuestionList";
 import Header from "./Header";
 import About from "./About";
+import Footer from "./Footer"
+
 
 
 function App() {
@@ -42,7 +44,7 @@ function App() {
         <NavBar onChangePage={setPage} />
         {/* {page === "Form" ? <QuestionForm onAddQuestion={setPage} /> : <QuestionList />} */}
         {getCurrentPage()}
-
+       <Footer />
       </div>
       
     </main>
