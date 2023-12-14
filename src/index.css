@@ -159,3 +159,43 @@ p {
 #about{
   padding-top: 2rem;
 }
+
+.accordion {
+  max-width: 600px;
+  margin: 2rem auto;
+  font-family: "Press Start 1p", cursive;
+}
+
+.accordion-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  cursor: pointer;
+  background-color: rgb(206, 176, 107);
+}
+
+.accordion-title:hover {
+  background-color: tomato;
+}
+
+.accordion-title,
+.accordion-content {
+  padding: 1rem;
+  font-family: "Press Start 1p", cursive;
+}
+
+.accordion-content {
+  background-color: tomato;
+}
+
+  @media screen and (max-width: 700px) {
+
+  .accordion {
+    width: 90%;
+  }
+}
+
+#footer {
+  text-align: center;
+  
+}

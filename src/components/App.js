@@ -1,10 +1,11 @@
 import React, { useState} from "react";
-import { BrowserRouter, Routes ,Route } from "react-router-dom";
 import NavBar from "./NavBar";
 import QuestionForm from "./QuestionForm";
 import QuestionList from "./QuestionList";
 import Header from "./Header";
 import About from "./About";
+import Footer from "./Footer"
+
 
 
 function App() {
@@ -24,25 +25,17 @@ function App() {
   
 
   return (
-    <BrowserRouter>
 
 <main>
       <div className={appClass}>
         <Header isDark={isDark} setIsDark={setIsDark}/>
         <NavBar onChangePage={setPage} />
-        <Routes>
-          
-          <Route path="/about" element={<About/>}/>
-          <Route path="/addquestion"element={<QuestionForm/>} />
-          <Route path="/" element={<QuestionList />} />
-
-        </Routes>
-
+        {/* {page === "Form" ? <QuestionForm onAddQuestion={setPage} /> : <QuestionList />} */}
+        {getCurrentPage()}
+       <Footer />
       </div>
       
     </main>
-    
-    </BrowserRouter>
     
   );
 }
