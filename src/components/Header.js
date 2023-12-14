@@ -1,12 +1,32 @@
-import React from 'react';
+import React from "react";
+import logo from "./logo.jpg"
 
-const Header = ({ darkMode, toggleDarkMode }) => {
-  return (
-    <div className={`header ${darkMode ? 'dark-mode' : ''}`}>
-      <button onClick={toggleDarkMode}>Toggle To Dark Mode</button>
-      <h1>IBUKA- A Knowledge repository.</h1>
-    </div>
-  );
-};
+function Header({isDark, setIsDark}){
+
+
+    function handleToggleClick(){
+
+    
+        return (
+          setIsDark(!isDark)
+        )
+      }
+
+
+    return (
+      <header>
+        <div className="header-button">
+        <button onClick={handleToggleClick}>
+          {isDark ? "Dark Mode" : "Light Mode"}
+        </button>
+        </div>
+        <img  src={logo} alt="logo" />
+
+        <h2>A knowledge repository</h2>
+        
+        
+      </header>
+    );
+}
 
 export default Header;

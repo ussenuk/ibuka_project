@@ -42,7 +42,7 @@ function handleUpdateQuestion(updatedQuestion) {
 
   return (
     <section>
-      <h1>Quiz Questions</h1>
+      <h1>Questions Accordion</h1>
       <ul>
         {questionsList}
         </ul>

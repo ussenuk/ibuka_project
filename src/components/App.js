@@ -1,29 +1,51 @@
-import React, { useState } from "react";
-import Header from './Header';
-import AdminNavBar from "./AdminNavBar";
+import React, { useState} from "react";
+import NavBar from "./NavBar";
 import QuestionForm from "./QuestionForm";
 import QuestionList from "./QuestionList";
+import Header from "./Header";
+import About from "./About";
+import Footer from "./Footer"
+
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
-  
-  const [page, setPage] = useState("List");
- 
-  
-  const [questions, setQuestions] = useState([]);
 
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-  };
+  const [isDark, setIsDark]= useState(false);
+  
+  const appClass = isDark ? "App dark" : "App light"
+
+
+
+ 
+
+    const [page, setPage] = useState("/")
+
+    function getCurrentPage() {
+      switch(page) {
+          case "/":
+              return <QuestionList  />
+          case "/about":
+              return <About />
+          case "/addquestion":
+              return <QuestionForm />
+          default:
+              return <h1>404 not found</h1>
+      }
+  }
+  
 
   return (
-  
-    <main className={`app-container ${darkMode ? 'dark-mode-toggle' : ''}`}>
-      <AdminNavBar onChangePage={setPage} />
-      {page === "Form" ? <QuestionForm onAddQuestion={setPage}/> : <QuestionList />}
-      {page === "Form" ? <QuestionForm onAddQuestion={() => setPage("List")} /> : <QuestionList />}
-      <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+    <main>
+      <div className={appClass}>
+        <Header isDark={isDark} setIsDark={setIsDark}/>
+        <NavBar onChangePage={setPage} />
+        <Footer />
+        
+        {getCurrentPage()}
+
+      </div>
+      
     </main>
   );
 }
+
 export default App;
