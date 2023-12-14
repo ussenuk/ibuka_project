@@ -43,9 +43,9 @@ function handleUpdateQuestion(updatedQuestion) {
   return (
     <section>
       <h1>Questions Accordion</h1>
-      <ul>
-        {questionsList}
-        </ul>
+        <div className="accordion">
+          {questionsList}
+        </div>
     </section>
   );
 }

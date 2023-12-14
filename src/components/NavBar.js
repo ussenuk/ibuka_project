@@ -2,7 +2,12 @@ import React from "react";
 
 function NavBar({ onChangePage }) {
   
-  
+  // return (
+  //   <nav>
+  //     {/* <button onClick={() => onChangePage("Form")}>Add Question</button> */}
+  //     {/* <button onClick={() => onChangePage("List")}>View Questions</button> */}
+  //   </nav>
+  // );
   function handleLinkClick(e) {
     e.preventDefault()
     onChangePage(e.target.pathname)
