@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from 'react';
+import update_icon from './update_icon.svg';
+import delete_icon from './delete_icon.svg';
 
 function QuestionItem({ question, onDeleteQuestion, onUpdateQuestion }) {
 
+  const [isActive, setIsActive] = useState(false);
 
   function handleDeleteClick(){
-    fetch(`http://localhost:4000/questions/${question.id}`, {
+    fetch(`http://localhost:3000/questions/${question.id}`, {
       method: "DELETE",
     })
       .then((r) => r.json())
@@ -12,7 +15,7 @@ function QuestionItem({ question, onDeleteQuestion, onUpdateQuestion }) {
   }
 
   function handleUpdateCorrectAnswer(event){
-    fetch(`http://localhost:4000/questions/${question.id}`, {
+    fetch(`http://localhost:3000/questions/${question.id}`, {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json",
@@ -27,24 +30,19 @@ function QuestionItem({ question, onDeleteQuestion, onUpdateQuestion }) {
 
 
 
-  const { id, prompt, answers, correctIndex } = question;
-
-  const options = answers.map((answer, index) => (
-    <option key={index} value={index}>
-      {answer}
-    </option>
-  ));
+  const { id, prompt, answers } = question;
 
   return (
-    <li>
-      <h4>Question {id}</h4>
-      <h5>Prompt: {prompt}</h5>
-      <label>
-        Correct Answer:
-        <select onClick={handleUpdateCorrectAnswer} defaultValue={correctIndex}>{options}</select>
-      </label>
-      <button onClick={handleDeleteClick}>Delete Question</button>
-    </li>
+
+    <div className="accordion-item">
+      <div className="accordion-title" onClick={() => setIsActive(!isActive)}>
+        <div>{prompt}</div>
+        <div>{isActive ? '-' : '+'}</div>
+        <div><img src = {update_icon} alt="Update Icon"/></div>
+        <div><img src = {delete_icon} alt="Delete Icon" onClick={handleDeleteClick}/></div>
+      </div>
+      {isActive && <div className="accordion-content">{answers}</div>}
+    </div>
   );
 }
 
