@@ -38,6 +38,7 @@ function QuestionItem({ question, onDeleteQuestion, onUpdateQuestion }) {
       <div className="accordion-title" onClick={() => setIsActive(!isActive)}>
         <div>{prompt}</div>
         <div>{isActive ? '-' : '+'}</div>
+        {/*Add Update functionality to update icon*/}
         <div><img src = {update_icon} alt="Update Icon"/></div>
         <div><img src = {delete_icon} alt="Delete Icon" onClick={handleDeleteClick}/></div>
       </div>
