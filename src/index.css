@@ -214,7 +214,7 @@ p {
 }
 
 .accordion-content {
-  background-color: rgb(206, 176, 107);
+  background-color: tomato;
 }
 
   @media screen and (max-width: 700px) {
