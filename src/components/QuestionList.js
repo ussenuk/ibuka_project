@@ -6,7 +6,7 @@ function QuestionList() {
   const [questions, setQuestions] = useState([]);
 
   useEffect(()=>{
-    fetch("http://localhost:4000/questions")
+    fetch("http://localhost:3000/questions")
       .then((r)=> r.json())
       .then((questions)=>  setQuestions(questions))
   }, [])
@@ -43,9 +43,9 @@ function handleUpdateQuestion(updatedQuestion) {
   return (
     <section>
       <h1>Questions Accordion</h1>
-      <ul>
-        {questionsList}
-        </ul>
+        <div className="accordion">
+          {questionsList}
+        </div>
     </section>
   );
 }
