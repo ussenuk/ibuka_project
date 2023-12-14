@@ -1,4 +1,5 @@
 import React, { useState} from "react";
+import { BrowserRouter, Routes ,Route } from "react-router-dom";
 import NavBar from "./NavBar";
 import QuestionForm from "./QuestionForm";
 import QuestionList from "./QuestionList";
@@ -20,32 +21,29 @@ function App() {
   // const [newPage, setNewPage] = useState("List");
 
     const [page, setPage] = useState("/")
-
-    function getCurrentPage() {
-      switch(page) {
-          case "/":
-              return <QuestionList  />
-          case "/about":
-              return <About />
-          case "/addquestion":
-              return <QuestionForm />
-          default:
-              return <h1>404 not found</h1>
-      }
-  }
   
 
   return (
-    <main>
+    <BrowserRouter>
+
+<main>
       <div className={appClass}>
         <Header isDark={isDark} setIsDark={setIsDark}/>
         <NavBar onChangePage={setPage} />
-        {/* {page === "Form" ? <QuestionForm onAddQuestion={setPage} /> : <QuestionList />} */}
-        {getCurrentPage()}
+        <Routes>
+          
+          <Route path="/about" element={<About/>}/>
+          <Route path="/addquestion"element={<QuestionForm/>} />
+          <Route path="/" element={<QuestionList />} />
+
+        </Routes>
 
       </div>
       
     </main>
+    
+    </BrowserRouter>
+    
   );
 }
 
