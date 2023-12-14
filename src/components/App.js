@@ -6,6 +6,7 @@ import Header from "./Header";
 import About from "./About";
 
 
+
 function App() {
 
   const [isDark, setIsDark]= useState(false);
@@ -42,7 +43,7 @@ function App() {
         <NavBar onChangePage={setPage} />
         {/* {page === "Form" ? <QuestionForm onAddQuestion={setPage} /> : <QuestionList />} */}
         {getCurrentPage()}
-
+       
       </div>
       
     </main>

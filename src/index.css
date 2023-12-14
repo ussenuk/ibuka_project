@@ -29,7 +29,7 @@
 
 /* body {
   background: rgb(231, 231, 231);
-} */
+} *n/
 
 h1,
 h2,
@@ -39,11 +39,7 @@ h5,
 h6 {
   margin-bottom: 0.5em;
   line-height: 1.5;
-<<<<<<< HEAD
-  text-align: center;
-=======
   font-family: "Press Start 1p", cursive;
->>>>>>> development
 }
 
 button {
@@ -226,4 +222,8 @@ p {
   .accordion {
     width: 90%;
   }
+}
+
+#footer {
+  text-align: center;
 }
