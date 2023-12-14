@@ -15,7 +15,7 @@ function QuestionItem({ question, onDeleteQuestion, onUpdateQuestion }) {
   }
 
   function handleUpdateCorrectAnswer(event){
-    fetch(`http://localhost:3000/questions/${question.id}`, {
+    fetch(`http://localhost:4000/questions/${question.id}`, {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json",

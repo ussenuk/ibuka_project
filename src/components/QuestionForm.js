@@ -22,7 +22,7 @@ function QuestionForm({ onAddQuestion }) {
       "answers": [""],
     }
 
-    fetch("http://localhost:3000/questions", {
+    fetch("http://localhost:4000/questions", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
