@@ -199,3 +199,13 @@ p {
   text-align: center;
   
 }
+
+#edit-question-form label{
+  display: block;
+}
+
+#edit-question-form label, #edit-question-form input, #edit-question-form textarea{
+  width: 100%;
+  margin-bottom: 2px;
+  box-sizing: 0;;
+}

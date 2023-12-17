@@ -2,13 +2,13 @@
   "questions": [
     {
       "id": 1,
-      "prompt": "What country has the highest life expectancy?",
-      "answers": "Hong Kong"
+      "prompt": "How many sides does the Great Pyramid of Giza have?",
+      "answers": "Each of the visible \"sides\" are actually made up of two different sides that are slightly concaved towards each other from base to tip. This was only discovered after the invention of the plane because the indentation is invisible from the ground."
     },
     {
       "id": 2,
-      "prompt": "Where would you be if you were standing on the Spanish Steps?",
-      "answers": "Rome"
+      "prompt": "What animal is responsible for the most human deaths in the world?",
+      "answers": "Mosquitos, which can infect people with deadly viruses are estimated by the World Health Organization to kill around 750,000 people per year."
     },
     {
       "id": 3,
@@ -17,8 +17,8 @@
     },
     {
       "id": 4,
-      "prompt": "What is the most common surname in the United States?",
-      "answers": "Smith"
+      "prompt": "What is the \"27 Club?\"",
+      "answers": "This is the group of musicians and artists who have died at the age of 27, leading many to believe the number to be cursed. These include Janis Joplin, Kurt Cobain, Jimi Hendrix, Jim Morrison, and Amy Winehouse."
     },
     {
       "id": 7,
@@ -29,6 +29,26 @@
       "id": 8,
       "prompt": "What year was the United Nations established?",
       "answers": "1945"
+    },
+    {
+      "prompt": "Do all Americans agree that Christmas should be a federal holiday?",
+      "answers": "Some Americans believe it is unconstitutional to have any religious day as a federal holiday. Others believe there is nothing wrong with recognizing a religious holiday, as long as the government doesn’t mandate religious observance. Alternatively, some believe we should keep Christmas as a federal holiday, but only if we give the same status to other traditions’ holidays, such as Diwali or Eid Al-Fitr.",
+      "id": 9
+    },
+    {
+      "prompt": "What is the separation of church and state?",
+      "answers": "The separation of church and state enables all citizens to practice their deeply held beliefs in private and in public.",
+      "id": 11
+    },
+    {
+      "prompt": "What is the most expensive piece of jewelry in the world?",
+      "answers": "The Hope Diamond, which is a rare 45.52 carat blue diamond, was originally even larger and known as the Tavernier Blue. It is on display at the Smithsonian and is estimated to be worth $250 million.",
+      "id": 12
+    },
+    {
+      "prompt": "What was the original name of Google?",
+      "answers": " Founders Larry Page and Sergey Brin eventually changed the name of their project to Google, basing it on concept of a googolplex. A googol is the digit 1 followed by one hundred zeroes. A googolplex is the number one followed by a googol zeroes.",
+      "id": 13
     }
   ]
 }

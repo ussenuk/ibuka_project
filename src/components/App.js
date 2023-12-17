@@ -1,4 +1,4 @@
-import React, { useState} from "react";
+import React, { useState, useEffect} from "react";
 import { BrowserRouter, Routes ,Route } from "react-router-dom";
 import NavBar from "./NavBar";
 import QuestionForm from "./QuestionForm";
@@ -17,11 +17,32 @@ function App() {
   const appClass = isDark ? "App dark" : "App light"
 
 
+    const [page, setPage] = useState("/");
 
-  // const [page, setPage] = useState("List");
-  // const [newPage, setNewPage] = useState("List");
+    const [questions, setQuestions] = useState([]);
 
-    const [page, setPage] = useState("/")
+    useEffect(()=>{
+      fetch("http://localhost:4000/questions")
+        .then((r)=> r.json())
+        .then((questions)=>  setQuestions(questions))
+    }, [])
+
+    function handleAddQuestion(newQuestion){
+      setQuestions([...questions, newQuestion]);
+    }
+
+
+    function handleDeleteQuestion(id) {
+      setQuestions(questions.filter((question) => question.id !== id));
+    }
+
+    function handleUpdateQuestion(updatedQuestion) {
+      setQuestions(questions.map((question) =>
+        question.id === updatedQuestion.id ? updatedQuestion : question
+      ));
+    }    
+    
+  
   
 
   return (
@@ -34,8 +55,8 @@ function App() {
         <Routes>
           
           <Route path="/about" element={<About/>}/>
-          <Route path="/addquestion"element={<QuestionForm/>} />
-          <Route path="/" element={<QuestionList />} />
+          <Route path="/addquestion" element={<QuestionForm onAddQuestion={handleAddQuestion}/>} />
+          <Route path="/" element={<QuestionList questions={questions} onDeleteQuestion={handleDeleteQuestion} onUpdateQuestion={handleUpdateQuestion} isDark={isDark} />} />
 
         </Routes>
 

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"; // import useNavigate
 
 function QuestionForm({ onAddQuestion }) {
   const [formData, setFormData] = useState({
@@ -6,10 +7,16 @@ function QuestionForm({ onAddQuestion }) {
     answers: "",
   });
 
+  const navigate = useNavigate(); // initialize useNavigate
+
   function handleChange(event) {
+
+    const name = event.target.name;
+    const value = event.target.value;
+
     setFormData({
       ...formData,
-      [event.target.name]: event.target.value,
+      [name]: value,
     });
   }
 
@@ -18,9 +25,9 @@ function QuestionForm({ onAddQuestion }) {
     // console.log(formData);
 
     const questionData={
-      "prompt": prompt,
-      "answers": [""],
-    }
+      "prompt": formData.prompt,
+      "answers": formData.answers,
+    };
 
     fetch("http://localhost:4000/questions", {
       method: "POST",
@@ -30,7 +37,8 @@ function QuestionForm({ onAddQuestion }) {
       body: JSON.stringify(questionData),
   })
     .then((r)=> r.json())
-    .then((newItem) => onAddQuestion(newItem));
+    .then((newQuestion) => onAddQuestion(newQuestion));
+    navigate("/"); // redirect to home page
   }
 
   return (
@@ -50,7 +58,7 @@ function QuestionForm({ onAddQuestion }) {
           Answer:
           <input
             type="text"
-            name="answer1"
+            name="answers"
             value={formData.answers}
             onChange={handleChange}
           />
