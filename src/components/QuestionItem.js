@@ -68,7 +68,7 @@ function QuestionItem({ question, onDeleteQuestion, onUpdateQuestion, isDark }) 
   function handleUpdateSubmit(event) {
     event.preventDefault();
 
-    fetch(`${process.env.REACT_APP_BASE_URL}${question.id}`, {
+    fetch(`${process.env.REACT_APP_BASE_URL}/questions/${question.id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
