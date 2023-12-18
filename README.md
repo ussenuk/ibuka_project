@@ -34,8 +34,8 @@ Run the application using the following command:
 
 ## Collaborators
 
-Name and Email [Ussen Kimanuka](ussen.kimanuka@student.moringaschool.com)
-[Benson Mwangi](benson.mwangi@student.moringaschool.com)
+[Ussen Kimanuka](ussen.kimanuka@student.moringaschool.com); 
+[Benson Mwangi](benson.mwangi@student.moringaschool.com); 
 [Mark Omuga](mark.omuga@student.moringaschool.com)
 
 ## Copyright and License Information
