@@ -54,7 +54,7 @@ function QuestionItem({ question, onDeleteQuestion, onUpdateQuestion, isDark }) 
   };
 
   function handleDeleteClick(){
-    fetch(`http://localhost:4000/questions/${question.id}`, {
+    fetch(`${process.env.REACT_APP_BASE_URL}/questions/${question.id}`, {
       method: "DELETE",
     })
       .then((r) => r.json())
@@ -68,7 +68,7 @@ function QuestionItem({ question, onDeleteQuestion, onUpdateQuestion, isDark }) 
   function handleUpdateSubmit(event) {
     event.preventDefault();
 
-    fetch(`http://localhost:4000/questions/${question.id}`, {
+    fetch(`${process.env.REACT_APP_BASE_URL}${question.id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

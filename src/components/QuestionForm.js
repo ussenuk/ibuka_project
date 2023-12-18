@@ -29,7 +29,7 @@ function QuestionForm({ onAddQuestion }) {
       "answers": formData.answers,
     };
 
-    fetch("http://localhost:4000/questions", {
+    fetch(`${process.env.REACT_APP_BASE_URL}/questions`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

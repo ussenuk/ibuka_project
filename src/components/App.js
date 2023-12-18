@@ -22,7 +22,8 @@ function App() {
     const [questions, setQuestions] = useState([]);
 
     useEffect(()=>{
-      fetch("http://localhost:4000/questions")
+      // fetch("http://localhost:4000/questions")
+      fetch(`${process.env.REACT_APP_BASE_URL}/questions`)
         .then((r)=> r.json())
         .then((questions)=>  setQuestions(questions))
     }, [])
