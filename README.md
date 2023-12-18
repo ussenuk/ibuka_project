@@ -32,9 +32,11 @@ Run the application using the following command:
 - Basic Programming knowledge on React/javascript
 - [VS Code](https://code.visualstudio.com/)
 
-## Collaborate
+## Collaborators
 
-Email [Ussen Kimanuka](ussen.kimanuka@student.moringaschool.com)
+[Ussen Kimanuka](ussen.kimanuka@student.moringaschool.com); 
+[Benson Mwangi](benson.mwangi@student.moringaschool.com); 
+[Mark Omuga](mark.omuga@student.moringaschool.com)
 
 ## Copyright and License Information
 
