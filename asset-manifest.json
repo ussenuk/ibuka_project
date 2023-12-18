@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/ibuka_project/static/css/main.1bec1aa2.css",
+    "main.js": "/ibuka_project/static/js/main.2f863f81.js",
+    "static/media/logo.jpg": "/ibuka_project/static/media/logo.1c584f711feddef75d43.jpg",
+    "static/media/delete_icon.svg": "/ibuka_project/static/media/delete_icon.8bfa4824457f748d484d5aaef2624f16.svg",
+    "index.html": "/ibuka_project/index.html",
+    "static/media/update_icon.svg": "/ibuka_project/static/media/update_icon.217e9f932d875c47973499e7f75d583a.svg",
+    "main.1bec1aa2.css.map": "/ibuka_project/static/css/main.1bec1aa2.css.map",
+    "main.2f863f81.js.map": "/ibuka_project/static/js/main.2f863f81.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1bec1aa2.css",
+    "static/js/main.2f863f81.js"
+  ]
+}
